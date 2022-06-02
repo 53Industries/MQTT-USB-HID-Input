@@ -48,16 +48,17 @@ Keyboard Key Definitions
 
 # Camplayer Example
 https://www.rpi-camplayer.com/
+- All topics must be inside of '<' '>' 
 
 | Topic MSG | Action |
 | ------------- | ------------- |
-| <cam1> - <cam9> | Switch to full screen camera |
-| <qdow>  | Quilty Down |
-| <qup> | Quilty Up |
-| <clef> | Prev Camera|
-| <crig> | Next Camera |
-| <back> | Return to grid view |
-| <paus> | Pause rotation |
-| <grid> | Switch out of grid view |
-| <quit> | Quit Camplayer |
+| cam1 - cam9 | Switch to full screen camera |
+| qdow  | Quilty Down |
+| qup | Quilty Up |
+| clef | Prev Camera|
+| crig | Next Camera |
+| back | Return to grid view |
+| paus | Pause rotation |
+| grid | Switch out of grid view |
+| quit | Quit Camplayer |
 	
