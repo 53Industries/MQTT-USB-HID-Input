@@ -55,23 +55,6 @@ void recvWithStartEndMarkers() {
     }
 }
 
-void showNewData() {
-    if (newData == true) {
-        Serial.print("This just in ... ");
-        Serial.println(receivedChars);
-        newData = false;
-        if (strcmp(receivedChars, "cam1") == 0) {
-          Serial.println("CAM 1");
-          Keyboard.press(KEY_C);
-          Keyboard.release(KEY_C);
-        } else if (strcmp(receivedChars, "cam2") == 0) {
-          Serial.println("CAM 2");
-          Keyboard.press(KEY_1);
-          Keyboard.release(KEY_1);
-        }
-    }
-}
-
 void keyboardControl()
 {
 	if (newData == true) {
@@ -131,3 +114,4 @@ void keyboardControl()
         }
 	}
 }
+
