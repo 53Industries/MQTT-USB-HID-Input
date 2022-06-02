@@ -10,7 +10,7 @@ HID Input commands back to the connected computer.
 
 Should work on any os with python support.
 
-- MQTT MSG to sent inside of '<' '>' for serial decoding.
+- MQTT MSG will need to be sent inside of '<' '>' for serial decoding.
 - Can be run as a service on linux using example service file
 
 Home Assistant custom button card example
@@ -45,4 +45,19 @@ Supported Boards
 Keyboard Key Definitions 
 - https://github.com/NicoHood/HID/blob/master/src/KeyboardLayouts/ImprovedKeylayouts.h
 - https://github.com/NicoHood/HID/tree/master/src/HID-APIs
+
+# Camplayer Example
+https://www.rpi-camplayer.com/
+
+| Topic MSG | Action |
+| ------------- | ------------- |
+| <cam1> - <cam9> | Switch to full screen camera |
+| <qdow>  | Quilty Down |
+| <qup> | Quilty Up |
+| <clef> | Prev Camera|
+| <crig> | Next Camera |
+| <back> | Return to grid view |
+| <paus> | Pause rotation |
+| <grid> | Switch out of grid view |
+| <quit> | Quit Camplayer |
 	
