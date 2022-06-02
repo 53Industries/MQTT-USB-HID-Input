@@ -33,14 +33,10 @@ Libraries
 - https://pypi.org/project/paho-mqtt/
 - https://pypi.org/project/pyserial/
 	
-arduino = serial.Serial(port='/dev/ttyACM0', baudrate=9600, timeout=.1)
-- Update this line of the script to match COM port and baudrate
-	
-client.subscribe("camdisplay/office/keyboard")
-- Update as needed
-	
-client.connect("127.0.0.1", 1883, 60)
-- Update to match MQTT Server
+Update the python script to match system and server settings
+- arduino = serial.Serial(port='/dev/ttyACM0', baudrate=9600, timeout=.1) (Update port and baudrate)
+- client.subscribe("camdisplay/office/keyboard") (Topic the scirpt will listen on)
+- client.connect("127.0.0.1", 1883, 60) (MQTT Server Settings)
 
 # Arduino
 Supported Boards
