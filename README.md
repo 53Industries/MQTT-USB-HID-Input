@@ -1,2 +1,50 @@
 # MQTT-USB-HID-Input
 Arduino Leonardo HID Input with MQTT Control
+
+Project was inspired from the need to control camplayer for raspberry pi, from home assistant.
+Since camplayer runs in the termial the few methods of keyboard keypress simulation I tryed, would
+not work with out x server running.
+
+Using a Arduino Leonardo and a python script MQTT mesages are recieved and sent to Arduino with then sends
+HID Input commands.
+
+- MQTT MSG to sent inside of '<' '>' for serial decoding.
+- Can be run as a service on linux using example service file
+
+Home Assistant custom button card example
+```
+type: custom:button-card
+tap_action:
+  action: call-service
+  service: mqtt.publish
+  service_data:
+    topic: <TOPIC GOES HERE>
+    payload: <PAYLOAD GOES HERE>
+```	
+
+# Python
+Python Version
+	- 2.7.9+
+	- 3.6+
+	
+Libraries
+	- https://pypi.org/project/paho-mqtt/
+	- https://pypi.org/project/pyserial/
+	
+arduino = serial.Serial(port='/dev/ttyACM0', baudrate=9600, timeout=.1)
+	- Update this line of the script to match COM port and baudrate
+	
+client.subscribe("camdisplay/office/keyboard")
+	- Update as needed
+	
+client.connect("127.0.0.1", 1883, 60)
+	- Update to match MQTT Server
+
+# Arduino
+Supported Boards
+	- https://github.com/NicoHood/HID
+	
+Keyboard Key Definitions 
+	- https://github.com/NicoHood/HID/blob/master/src/KeyboardLayouts/ImprovedKeylayouts.h
+	- https://github.com/NicoHood/HID/tree/master/src/HID-APIs
+	
